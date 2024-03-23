@@ -15,7 +15,7 @@ app.get('/hellow', (req, res) => {
 app.get('/:scrip', (req, res) => {
     const { scrip } = req.params;
     const price = Math.floor(Math.random() * (500 - 400 + 1)) + 400; // Generate random price between 400 and 500
-    const data = [{ scrip, price }];
+    const data = { scrip, price };
     res.json(data);
 });
 
